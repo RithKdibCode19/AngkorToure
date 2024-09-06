@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="./Tourist Template/img/logo.ico" rel="icon">
+    <link href="./Tourist-Template/img/logo.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +32,7 @@
     <link href="css/style.css" rel="stylesheet">
 
     <!-- boostrap  -->
-     <link rel="stylesheet" href="./Tourist Template/bootstrap/bootstrap-5.3.3-examples/assets/dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="./Tourist-Template/bootstrap/bootstrap-5.3.3-examples/assets/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
@@ -40,7 +40,7 @@
           <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
             <div class="d-flex justify-content-center py-4 logo d-flex align-items-center w-auto">
-                <img src="./Tourist Template/img/logo.webp" alt="">
+                <img src="./Tourist-Template/img/logo.webp" alt="">
                 <h3 class="d-none d-lg-block">AngKorTour</h3>
             </div><!-- End Logo -->
 
@@ -77,7 +77,7 @@
                   <div class="col-12">
                     <button class="btn btn-primary w-100" type="button" onclick="userLogin()">Login</button>
                     <div class="d-flex justify-content-center py-2  d-flex align-items-center w-auto"></div>
-                      <a href="./Tourist Template/register.html">
+                      <a href="./Tourist-Template/register.html">
                       <button class="btn btn-primary w-100" type="button" onclick="userLogin()">Register</button>
                     </a>
                   </div>
@@ -91,7 +91,7 @@
     
     <script>
       if(localStorage.getItem('Admin')!=null){
-        window.location.href="./Tourist Template/index.html";
+        window.location.href="./Tourist-Template/index.html";
       }
       function userLogin(){
         var username=document.getElementById('yourName').value;
@@ -103,7 +103,7 @@
           document.getElementById('display_error').innerHTML="";
           if(username=="admin" && password=="111"){
             localStorage.setItem('Admin',username);
-            window.location.href="./Tourist Template/index.html";
+            window.location.href="./Tourist-Template/index.html";
           }
         }
       }
