@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AngKorTour</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="./Tourist Template/img/logo.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- boostrap  -->
+     <link rel="stylesheet" href="./Tourist Template/bootstrap/bootstrap-5.3.3-examples/assets/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+            <div class="d-flex justify-content-center py-4 logo d-flex align-items-center w-auto">
+                <img src="./Tourist Template/img/logo.webp" alt="">
+                <h3 class="d-none d-lg-block">AngKorTour</h3>
+            </div><!-- End Logo -->
+
+            <div class="card mb-3">
+
+              <div class="card-body">
+
+                <div class="pt-4 pb-2">
+                  <h5 class="card-title text-center pb-0 fs-4">Login your Account</h5>
+                  <p class="text-center small text-danger"  id="display_error"></p>
+                </div>
+
+                <form class="row g-3 needs-validation" novalidate>
+
+                  <div class="col-12">
+                    <label for="yourName" class="form-label">Username</label>
+                    <input type="email" name="email" class="form-control" id="yourName" required>
+                    
+                  </div>
+
+                  <div class="col-12">
+                    <label for="yourPassword" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="yourPassword" required>
+                    
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
+                      <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
+                      <div class="invalid-feedback">You must agree before submitting.</div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary w-100" type="button" onclick="userLogin()">Login</button>
+                    <div class="d-flex justify-content-center py-2  d-flex align-items-center w-auto"></div>
+                      <a href="./Tourist Template/register.html">
+                      <button class="btn btn-primary w-100" type="button" onclick="userLogin()">Register</button>
+                    </a>
+                  </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <script>
+      if(localStorage.getItem('Admin')!=null){
+        window.location.href="./Tourist Template/index.html";
+      }
+      function userLogin(){
+        var username=document.getElementById('yourName').value;
+        var password=document.getElementById('yourPassword').value;
+        if(username=="" || password==""){
+          // alert("Empty username or password. Try again!");
+          document.getElementById('display_error').innerHTML="Wrong Username or Password";
+        }else{
+          document.getElementById('display_error').innerHTML="";
+          if(username=="admin" && password=="111"){
+            localStorage.setItem('Admin',username);
+            window.location.href="./Tourist Template/index.html";
+          }
+        }
+      }
+    </script>
+</body>
+</html>
